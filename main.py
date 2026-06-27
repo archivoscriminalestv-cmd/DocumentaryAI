@@ -1,11 +1,3 @@
-print("=" * 50)
-print("DOCUMENTARY AI")
-print("=" * 50)
+from app.app import start
 
-print()
-
-print("Proyecto cargado correctamente.")
-
-print()
-
-print("Bienvenido.")
+start()
