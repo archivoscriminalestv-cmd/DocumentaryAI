@@ -1,0 +1,27 @@
+[project]
+name = "documentaryai"
+version = "0.1.0"
+description = "Plataforma modular para investigar casos criminales reales mediante IA."
+requires-python = ">=3.11"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+# E/W: pycodestyle (PEP 8), F: pyflakes, I: isort (orden de imports)
+select = ["E", "W", "F", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
