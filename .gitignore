@@ -17,6 +17,7 @@ env/
 # Environment variables / secrets
 .env
 .env.*
+!.env.example
 
 # Tooling caches
 .mypy_cache/
@@ -28,3 +29,44 @@ htmlcov/
 # IDE / editor
 .idea/
 *.swp
+
+# Artefactos generados por el pipeline de producción
+outputs/
+
+# Biblioteca permanente de assets (ALR) — binarios generados, no se versionan en git
+library/
+
+# Base de conocimiento del DLE — generada a partir de análisis, no se versiona en git
+knowledge/
+
+# Temporales del aprendizaje (DLE-002A) y vídeos de referencia archivados
+cache/
+archive/
+
+# === INF-003: exclusiones recomendadas (Git Sanitizer) ===
+output/
+workspace/
+workspaces/
+downloads/
+renders/
+render/
+tmp/
+temp/
+logs/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.gguf
+*.zip
+*.7z
+*.rar
+*.exe
+*.dll
+/channel_intro.mp4

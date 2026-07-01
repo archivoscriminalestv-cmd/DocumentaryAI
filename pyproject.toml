@@ -3,6 +3,14 @@ name = "documentaryai"
 version = "0.1.0"
 description = "Plataforma modular para investigar casos criminales reales mediante IA."
 requires-python = ">=3.11"
+# Cada dependencia queda encapsulada en un único adaptador de infraestructura.
+dependencies = [
+    "youtube-transcript-api>=0.6",  # app/infrastructure/youtube/transcript_fetcher.py
+    "requests>=2.31",               # app/infrastructure/youtube/transcript_fetcher.py
+    "Pillow>=10.0",                 # app/infrastructure/visual/card_renderer.py
+    "imageio-ffmpeg>=0.5",          # app/infrastructure/video/ffmpeg_composer.py
+    "anthropic>=0.40",              # app/infrastructure/llm/anthropic_client.py
+]
 
 [tool.black]
 line-length = 88
